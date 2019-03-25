@@ -80,3 +80,15 @@ header nav ul li a:hover{
     height: 100%;
     padding-right: 5vw;
 } */
+
+#weather span{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+}
+
+#weather span p{
+    padding: 0 2rem;
+    font-size: calc(0.5rem + 5vw);
+}
