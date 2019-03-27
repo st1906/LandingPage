@@ -23,3 +23,23 @@ window.addEventListener("load", ()=>{
         alert("Turn on location for weather to work");
  
 });
+
+//Language
+let cro = document.getElementById("language");
+cro.addEventListener("click", ()=>{
+    let home = document.getElementById("home");
+    let description = document.getElementById("description");
+    let contact = document.getElementById("contact");
+    let about = document.getElementById("about");
+    let text = document.querySelector("h1");
+
+    fetch("strings.json")
+        .then(r=>r.json())
+        .then(i=>{
+            home.textContent = i.Home;
+            description.textContent = i.Description;
+            contact.textContent = i.Contact;
+            about.textContent = i.About;
+            text.textContent = i.Text;
+        });
+})

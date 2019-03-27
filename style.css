@@ -92,3 +92,20 @@ header nav ul li a:hover{
     padding: 0 2rem;
     font-size: calc(0.5rem + 5vw);
 }
+
+/*Language*/
+#language{
+    background: var(--primaryColor);
+    padding: 0.5rem;
+    border-radius: 16px;
+    cursor: pointer;
+}
+#language::before{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    content: "";
+    background: url('./img/cro_flag.png') no-repeat 0 0;
+    background-size: 100%;
+}
