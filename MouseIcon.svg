@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="62.496" height="54.19" viewBox="0 0 62.496 54.19">
+  <g id="Mouse_icon" data-name="Mouse icon" transform="translate(-929.386 -905.81)">
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(941 906)" fill="none" stroke="#000" stroke-width="4">
+      <ellipse cx="19.5" cy="27" rx="19.5" ry="27" stroke="none"/>
+      <ellipse cx="19.5" cy="27" rx="17.5" ry="25" fill="none"/>
+    </g>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="7.5" cy="7.5" r="7.5" transform="translate(953 918)"/>
+    <path id="Path_1" data-name="Path 1" d="M932.382,938.369l-5.5-13.124V909.414l5.5-9.351" transform="translate(9 6)" fill="none" stroke="#707070" stroke-width="1"/>
+    <path id="Path_6" data-name="Path 6" d="M932.382,938.369l-5.5-13.124V909.414l5.5-9.351" transform="translate(1918.268 1844.433) rotate(180)" fill="none" stroke="#707070" stroke-width="1"/>
+    <path id="Path_2" data-name="Path 2" d="M932.382,938.369l-5.5-13.124V909.414l5.5-9.351" transform="translate(6 6)" fill="none" stroke="#707070" stroke-width="1"/>
+    <path id="Path_5" data-name="Path 5" d="M932.382,938.369l-5.5-13.124V909.414l5.5-9.351" transform="translate(1915.268 1844.433) rotate(180)" fill="none" stroke="#707070" stroke-width="1"/>
+    <path id="Path_3" data-name="Path 3" d="M932.382,938.369l-5.5-13.124V909.414l5.5-9.351" transform="translate(3 6)" fill="none" stroke="#707070" stroke-width="1"/>
+    <path id="Path_4" data-name="Path 4" d="M932.382,938.369l-5.5-13.124V909.414l5.5-9.351" transform="translate(1912.268 1844.433) rotate(180)" fill="none" stroke="#707070" stroke-width="1"/>
+  </g>
+</svg>

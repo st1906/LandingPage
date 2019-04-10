@@ -1,0 +1,71 @@
+/*Universal settings*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary_color: #DFDFDF;
+    --background: white;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Header*/
+header,
+section#work div{
+    padding: 0 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary_color);
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+}
+header nav ul li{
+    list-style-type: none;
+    padding: 1rem 0rem;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: black; /*Making it var*/
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+}
+header nav ul li:hover{
+    background: var(--background);
+    cursor: pointer;
+}
+
+/*Hero section*/
+section#hero{
+    background: url("./img/alif-ngoylung-243373-unsplash.jpg") no-repeat center center/cover;
+    height: 100vh;
+}
+section#hero div{
+    background: var(--primary_color);
+    opacity: 0.8;
+    width: fit-content;
+    padding: 2rem 4rem;
+    border-radius: 16px;
+    margin: 0 auto;
+    position: relative;
+    top: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section#hero div p{
+    text-align: center;
+    opacity: 0.95;
+}
+section#hero div img{
+    padding: 1rem 0 0 0;
+    height: 3rem;
+    width: auto;
+}
+/*Content section*/
