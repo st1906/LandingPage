@@ -15,7 +15,7 @@ body{
 /*Header*/
 header,
 section#work div{
-    padding: 0 10vw;
+    padding: 0 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,16 +29,19 @@ header nav ul{
 header nav ul li{
     list-style-type: none;
     padding: 1rem 0rem;
+    transition: all 0.4s;
 }
 header nav ul li a{
+    display: inline-block;
     text-decoration: none;
     color: black; /*Making it var*/
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     font-size: 1.5rem;
 }
 header nav ul li:hover{
     background: var(--background);
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 /*Hero section*/
@@ -70,3 +73,65 @@ section#hero div img{
 }
 /*Work section*/
 /*Section#Work=Header CSS*/
+#work{
+    background: var(--background);
+}
+#work nav .fab{
+    padding: 1rem;
+    opacity: 0.85;
+    transition: all 0.4s;
+}
+#work nav .fa-facebook{
+    color: #3B5998;
+}
+#work nav .fa-twitter-square{
+    color: #00aced;
+}
+#work nav .fa-instagram{
+    color: #E1306C;
+}
+#work nav .fa-linkedin{
+    color: #0077B5;
+}
+#work a i:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/*Photo-feed*/
+#work #photo-feed{
+    padding: 1rem 1rem;
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    background: var(--background);
+}
+#work #photo-feed img{
+    height: 33vh;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: 0.5rem;
+    background-position: center center;
+}
+
+
+/*MOBILE CSS*/
+@media only screen and (max-width: 768px)
+{
+    header nav ul li a{
+        font-size: 1rem;
+        padding: 1rem 0.5rem;
+    }
+    section#hero div img{
+        display: none;
+    }
+    section#work div{
+        flex-direction: column-reverse;
+    }
+    #work nav .fab{
+        padding: 0.5rem;
+    }
+    #work #photo-feed{
+        grid-template-columns: 90vw;
+    }
+}
