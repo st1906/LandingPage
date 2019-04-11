@@ -114,6 +114,48 @@ section#hero div img{
     background-position: center center;
 }
 
+/*CONTACT FORM STYLE*/
+#contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 4rem;
+    background: url("./img/sergio-souza-1386770-unsplash.jpg") no-repeat center center/cover;
+    height: 75vh;
+}
+#contact form,
+#about{
+    width: 30vw;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background: var(--primary_color);
+    padding: 3rem 1.5rem;
+    border-radius: 16px;
+    opacity: 0.8;
+}
+#contact form input{
+    border-radius: 8px;
+    border: 0.4px black solid;
+    padding: 4px 0;
+}
+#contact form textarea{
+    border-radius: 8px;
+    border: 0.4px black solid;
+    resize: none;
+}
+#contact form button{
+    background: var(--background);
+    border: 0.4px black solid;
+    text-align: center;
+    border-radius: 12px;
+    text-decoration: none;
+    width: 120px;
+    padding: 0.5rem 0;
+    margin: 1rem auto;
+}
+
 
 /*MOBILE CSS*/
 @media only screen and (max-width: 768px)
@@ -134,4 +176,20 @@ section#hero div img{
     #work #photo-feed{
         grid-template-columns: 90vw;
     }
+    #contact{
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+    #contact form,
+    #about{
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background: var(--primary_color);
+    padding: 1rem;
+    border-radius: 16px;
+    opacity: 0.8;
 }
+}
+
