@@ -100,7 +100,7 @@ section#hero div img{
 
 /*Photo-feed*/
 #work #photo-feed{
-    padding: 1rem 1rem;
+    padding: 1rem 1rem 2rem 1rem;
     display: grid;
     grid-template-columns: 30vw 30vw 30vw;
     background: var(--background);
@@ -120,21 +120,23 @@ section#hero div img{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0 4rem;
+    padding: 1rem 4rem;
     background: url("./img/sergio-souza-1386770-unsplash.jpg") no-repeat center center/cover;
-    height: 75vh;
+    height: calc(66vh + 8rem);
 }
 #contact form,
 #about{
     width: 30vw;
-    height: 400px;
+    max-width: 440px;
+    height: 440px;
     display: flex;
     flex-direction: column;
     background: var(--primary_color);
-    padding: 3rem 1.5rem;
+    padding: 1rem 1rem 0 1rem;
     border-radius: 16px;
     opacity: 0.8;
 }
+
 #contact form input{
     border-radius: 8px;
     border: 0.4px black solid;
@@ -145,6 +147,14 @@ section#hero div img{
     border: 0.4px black solid;
     resize: none;
 }
+#contact h3{
+    text-align: center;
+    padding: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+#contact p{
+    padding: 2rem 0 0 0;
+}
 #contact form button{
     background: var(--background);
     border: 0.4px black solid;
@@ -153,7 +163,14 @@ section#hero div img{
     text-decoration: none;
     width: 120px;
     padding: 0.5rem 0;
-    margin: 1rem auto;
+    margin: 1rem auto 0.5rem auto;
+    font-weight: bold;
+    transition: all 0.4s;
+}
+#contact form button:hover{
+    cursor: pointer;
+    background: var(--primary_color);
+    transform: scale(1.1);
 }
 
 
@@ -175,21 +192,24 @@ section#hero div img{
     }
     #work #photo-feed{
         grid-template-columns: 90vw;
+        margin: 0 auto;
     }
     #contact{
         flex-direction: column-reverse;
         height: fit-content;
+        padding: 0;
     }
     #contact form,
     #about{
-    width: 95%;
-    height: fit-content;
+    width: 80%;
+    height: 360px;
     display: flex;
     flex-direction: column;
     background: var(--primary_color);
     padding: 1rem;
     border-radius: 16px;
     opacity: 0.8;
+    margin: 1.5rem 0;
 }
 }
 
