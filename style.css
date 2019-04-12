@@ -107,7 +107,7 @@ section#hero div img{
 }
 #work #photo-feed img{
     height: 33vh;
-    max-height: 100%;
+    /* max-height: 100%; */
     width: 100%;
     object-fit: cover;
     padding: 0.5rem;
@@ -193,6 +193,11 @@ section#hero div img{
     #work #photo-feed{
         grid-template-columns: 90vw;
         margin: 0 auto;
+        justify-content: center;
+    }
+    #photo-feed img{
+        height: 50vh !important;
+        max-height: 100%;
     }
     #contact{
         flex-direction: column-reverse;
