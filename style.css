@@ -43,6 +43,9 @@ header nav ul li:hover{
     cursor: pointer;
     transform: scale(1.05);
 }
+.fa-camera{
+    opacity: 0.1;
+}
 
 /*Hero section*/
 section#hero{
@@ -51,7 +54,7 @@ section#hero{
 }
 section#hero div{
     background: var(--primary_color);
-    opacity: 0.8;
+    opacity: 0.85;
     width: fit-content;
     padding: 2rem 4rem;
     border-radius: 16px;
@@ -61,6 +64,8 @@ section#hero div{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation-name: hero_div;
+    animation-duration: 0.8s;
 }
 section#hero div p{
     text-align: center;
@@ -141,11 +146,19 @@ section#hero div img{
     border-radius: 8px;
     border: 0.4px black solid;
     padding: 4px 0;
+    outline: none;
 }
+input#email,
+input#subject,
+textarea#message{
+    padding: 4px 8px !important;
+}
+
 #contact form textarea{
     border-radius: 8px;
     border: 0.4px black solid;
     resize: none;
+    outline: none;
 }
 #contact h3{
     text-align: center;
@@ -177,9 +190,29 @@ section#hero div img{
 /*MOBILE CSS*/
 @media only screen and (max-width: 768px)
 {
+    header{
+        justify-content: center;
+    }
     header nav ul li a{
         font-size: 1rem;
-        padding: 1rem 0.5rem;
+        padding: 0 0.5rem;
+    }
+    .fa-camera{
+        display: none;
+    }
+    section#hero div{
+        margin: 0;
+        border-radius: 0 24px 24px 0;
+        top: 63vh;
+        padding: 1.5rem 25vw 1.5rem 1.5rem;
+        opacity: 0.7;
+        animation-name: from_right;
+        animation-duration: 1s;
+    }
+    section#hero div p{
+        text-align: start;
+        font-size: 1.2rem;
+        opacity: 1;
     }
     section#hero div img{
         display: none;
@@ -215,6 +248,16 @@ section#hero div img{
     border-radius: 16px;
     opacity: 0.8;
     margin: 1.5rem 0;
+    }
 }
+
+/*ANIMATIONS*/
+@keyframes hero_div {
+    from{transform: translateY(-1000px)}
+    to {transform: translateY(0);}
+}
+@keyframes from_right{
+    from{transform: translateX(-1000px)}
+    to {transform: translateX(0);}
 }
 
