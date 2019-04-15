@@ -255,6 +255,53 @@ textarea#message{
     margin: 1.5rem 0;
     }
 }
+/*MOBILE LANDSCAPE*/
+@media(max-height: 500px){
+  
+    section#hero div{
+        top: 30vh;
+        padding: 1rem 2rem;
+    }
+    #work #photo-feed{
+        grid-template-columns: 40vw 40vw;
+    }
+    section#work div{
+        justify-content: space-evenly;
+        padding: 1rem;
+    }
+    #photo-feed img{
+        height: 50vh !important;
+        max-height: 100%;
+    }
+    #contact{
+        flex-direction: column-reverse;
+        height: fit-content;
+        padding: 0;
+    }
+
+    #contact form,
+    #about{
+    width: 80%;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    background: var(--primary_color);
+    padding: 1rem;
+    border-radius: 16px;
+    opacity: 0.8;
+    margin: 1.5rem 0;
+    }
+
+}
+@media(min-width: 600px) and (max-width: 768px){
+    #work #photo-feed{
+        grid-template-columns: 40vw 40vw;
+    }
+    #photo-feed img{
+        height: 40vh !important;
+        max-height: 100%;
+    }
+}
 
 /*BIG SCREEN CSS*/
 @media only screen and (min-width: 1600px){
