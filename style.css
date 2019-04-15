@@ -198,6 +198,10 @@ textarea#message{
         font-size: 1rem;
         padding: 0 0.5rem;
     }
+    header nav ul li:hover{
+        background: var(--primary_color);
+        transform: scale(1);
+    }
     .fa-camera{
         display: none;
     }
