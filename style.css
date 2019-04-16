@@ -76,6 +76,9 @@ section#hero div img{
     padding: 1rem 0 0 0;
     height: 3rem;
     width: auto;
+    animation-name: giggle;
+    animation-delay: 2s;
+    animation-duration: 0.5s;
 }
 /*Work section*/
 /*Section#Work=Header CSS*/
@@ -89,15 +92,27 @@ section#hero div img{
 }
 #work nav .fa-facebook{
     color: #3B5998;
+    animation-name: giggle;
+    animation-delay: 5s;
+    animation-duration: 1.5s;
 }
 #work nav .fa-twitter-square{
     color: #00aced;
+    animation-name: giggle;
+    animation-delay: 5.5s;
+    animation-duration: 1.5s;
 }
 #work nav .fa-instagram{
     color: #E1306C;
+    animation-name: giggle;
+    animation-delay: 6s;
+    animation-duration: 1.5s;
 }
 #work nav .fa-linkedin{
     color: #0077B5;
+    animation-name: giggle;
+    animation-delay: 6.5s;
+    animation-duration: 1.5s;
 }
 #work a i:hover{
     transform: scale(1.1);
@@ -378,4 +393,9 @@ textarea#message{
     from{transform: translateX(-1000px)}
     to {transform: translateX(0);}
 }
-
+@keyframes giggle{
+    0% {transform: rotate(15deg)}
+    25% {transform: rotate(0)}
+    50% {transform: rotate(-15deg)}
+    100% {transform: rotate(0)}
+}
