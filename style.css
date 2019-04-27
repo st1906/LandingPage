@@ -246,7 +246,7 @@ textarea#message{
         height: 2px;
         background: black;
     }
-    nav{
+    header nav{
         display: none;
     }
     .toggler:checked ~ nav{
