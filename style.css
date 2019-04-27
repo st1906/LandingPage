@@ -202,16 +202,72 @@ textarea#message{
     transform: scale(1.1);
 }
 
-
+.toggler{
+    visibility: hidden;
+}
 /*MOBILE CSS*/
 @media only screen and (max-width: 768px)
 {
     header{
-        justify-content: center;
+        flex-direction: column;
+    }
+    .toggler{
+        visibility: visible;
+        width: 60px;
+        height: 50px;
+        margin: 1rem 78vw 1rem 0rem;
+        opacity: 0;
+        cursor: pointer;
+        outline: none;
+    }
+    .hamburger div {
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        background: black;
+        margin: 0.5rem;
+        left: calc(0.1rem + 5vw);
+        top: 2rem;
+        transition: all 0.4s ease;
+    }
+    .hamburger div::before{
+        content: "";
+        position: absolute;
+        top: -1rem;;
+        width: 50px;
+        height: 2px;
+        background: black;
+    }
+    .hamburger div::after{
+        content: "";
+        position: absolute;
+        top: 1rem;;
+        width: 50px;
+        height: 2px;
+        background: black;
+    }
+    nav{
+        display: none;
+    }
+    .toggler:checked ~ nav{
+        display: unset;
+    }
+
+    .toggler:checked + .hamburger div::after,
+    .toggler:checked + .hamburger div::before{
+        top: 0;
+        transform: rotate(90deg);
+    }
+    .toggler:checked + .hamburger div{
+        transform: rotate(-45deg);
+    }
+    header nav ul{
+        flex-direction: column;
+        text-align: center;
     }
     header nav ul li a{
-        font-size: 1rem;
-        padding: 0 0.5rem;
+        font-size: 2rem;
+        padding: 1rem 0.5rem;
     }
     header nav ul li:hover{
         background: var(--primary_color);
@@ -273,6 +329,10 @@ textarea#message{
 /*MOBILE LANDSCAPE*/
 @media(max-height: 500px){
   
+    header nav ul{
+        flex-direction: row;
+    }
+
     section#hero div{
         top: 30vh;
         padding: 1rem 2rem;
