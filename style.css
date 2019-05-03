@@ -131,7 +131,7 @@ section#hero div img{
     padding: 1rem 1rem 2rem 1rem;
     display: grid;
     grid-template-columns: 30vw 30vw 30vw;
-    background: var(--background);
+    background: var(--primary_color);
 }
 #work #photo-feed img{
     height: 33vh;
@@ -223,8 +223,8 @@ textarea#message{
     margin: auto;
     display: block;
     width: 60vw;
-    height: auto;
-    max-height: 70vh;
+    /* height: auto; */
+    height: 70vh;
     /* max-width: 700px; */
   }
   /* The Modal (background) */
@@ -401,11 +401,23 @@ textarea#message{
         font-size: 2rem;
     }
     .modal-content{
-        width: 85vw;
-        height: auto;
-        max-height: 70vh;
+        width: 80vw;
+        height: 60vh;
     }
 }
+@media(max-width: 580px){
+    .modal-content{
+        width: 80vw;
+        height: 40vh;
+    }
+}
+@media(max-width: 400px){
+    .modal-content{
+        width: 80vw;
+        height: 30vh;
+    }
+}
+
 /*MOBILE LANDSCAPE*/
 @media(max-height: 500px){
   
@@ -449,8 +461,8 @@ textarea#message{
 
     .modal-content{
         width: 60vw;
-        height: auto;
-        max-height: 60vh;
+        height: 60vh;
+        /* max-height: 60vh; */
     }
     .modal{
         padding-top: 60px;
