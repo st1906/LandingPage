@@ -13,6 +13,7 @@ body{
 }
 
 /*Header*/
+/*CSS for (nav)bars - header and work*/
 header,
 section#work div{
     padding: 0 2rem;
@@ -21,6 +22,12 @@ section#work div{
     justify-content: space-between;
     align-items: center;
     background: var(--primary_color);
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    opacity: 0.9;
 }
 header nav ul{
     display: flex;
@@ -134,6 +141,9 @@ section#hero div img{
     padding: 0.5rem;
     background-position: center center;
 }
+#work #photo-feed img:hover{
+    cursor: pointer;
+}
 
 /*CONTACT FORM STYLE*/
 #contact{
@@ -160,7 +170,7 @@ section#hero div img{
 
 #contact form input{
     border-radius: 8px;
-    border: 0.4px black solid;
+    border: 1px black solid;
     padding: 4px 0;
     outline: none;
 }
@@ -172,7 +182,7 @@ textarea#message{
 
 #contact form textarea{
     border-radius: 8px;
-    border: 0.4px black solid;
+    border: 1px black solid;
     resize: none;
     outline: none;
 }
@@ -205,6 +215,67 @@ textarea#message{
 .toggler{
     visibility: hidden;
 }
+
+/*MODAL GALLERY*/
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 60vw;
+    height: auto;
+    max-height: 70vh;
+    /* max-width: 700px; */
+  }
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    padding-top: 80px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  /* The Close Button */
+.close {
+    position: absolute;
+    top: calc(15px + 1vw);
+    right: calc(35px + 1vw);
+    color: #f1f1f1;
+    font-size: calc(2rem + 5vw);
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /*Arrows*/
+.arrow{
+      color: white;
+      margin: 1rem 2rem;
+      font-size: 1.5rem;
+  }
+.arrow:hover{
+      cursor: pointer;
+  }
+#arrows-span{
+      display: flex;
+      padding: 1rem;
+      justify-content: center;
+  }
+
+
+
 /*MOBILE CSS*/
 @media only screen and (max-width: 768px)
 {
@@ -325,6 +396,15 @@ textarea#message{
     opacity: 0.8;
     margin: 1.5rem 0;
     }
+
+    .close{
+        font-size: 2rem;
+    }
+    .modal-content{
+        width: 85vw;
+        height: auto;
+        max-height: 70vh;
+    }
 }
 /*MOBILE LANDSCAPE*/
 @media(max-height: 500px){
@@ -367,6 +447,14 @@ textarea#message{
     margin: 1.5rem 0;
     }
 
+    .modal-content{
+        width: 60vw;
+        height: auto;
+        max-height: 60vh;
+    }
+    .modal{
+        padding-top: 60px;
+    }
 }
 @media(min-width: 600px) and (max-width: 768px){
     #work #photo-feed{
@@ -419,6 +507,9 @@ textarea#message{
     #work #photo-feed{
         padding: 1rem calc(4em + 1vw) 2rem calc(4rem + 1vw);
     }
+    .arrow{
+        font-size: 2.5rem;
+    }
 }
 @media only screen and (min-width: 2440px){
     #contact form label,
@@ -459,51 +550,3 @@ textarea#message{
     50% {transform: rotate(-15deg)}
     100% {transform: rotate(0)}
 }
-
-/*For scaling*/
-/* .scale{
-    transform: scale(2);
-
-} */
-
-/* Modal Content (image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80vw;
-    height: auto;
-    max-height: 80vh;
-    /* max-width: 700px; */
-  }
-  /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
-
-  /* The Close Button */
-.close {
-    position: absolute;
-    top: calc(15px + 1vw);
-    right: calc(35px + 1vw);
-    color: #f1f1f1;
-    font-size: calc(2rem + 5vw);
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
