@@ -12,6 +12,7 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+
 /*Header*/
 /*CSS for (nav)bars - header and work*/
 header,
@@ -54,6 +55,8 @@ header nav ul li:hover{
     opacity: 0.1;
 }
 
+
+
 /*Hero section*/
 section#hero{
     background: url("./img/alif-ngoylung-243373-unsplash.jpg") no-repeat center center/cover;
@@ -84,9 +87,13 @@ section#hero div img{
     height: 3rem;
     width: auto;
     animation-name: giggle;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-duration: 0.5s;
+    animation-iteration-count: 2;
 }
+
+
+
 /*Work section*/
 /*Section#Work=Header CSS*/
 #work{
@@ -126,11 +133,14 @@ section#hero div img{
     cursor: pointer;
 }
 
+
+
 /*Photo-feed*/
 #work #photo-feed{
     padding: 1rem 1rem 2rem 1rem;
     display: grid;
     grid-template-columns: 30vw 30vw 30vw;
+    grid-gap: 0.5rem;
     background: var(--primary_color);
 }
 #work #photo-feed img{
@@ -140,10 +150,14 @@ section#hero div img{
     object-fit: cover;
     padding: 0.5rem;
     background-position: center center;
+    transition: all 0.5s;
 }
 #work #photo-feed img:hover{
     cursor: pointer;
+    transform: scale(1.1);
 }
+
+
 
 /*CONTACT FORM STYLE*/
 #contact{
@@ -215,6 +229,9 @@ textarea#message{
 .toggler{
     visibility: hidden;
 }
+
+
+
 
 /*MODAL GALLERY*/
 
@@ -524,6 +541,11 @@ textarea#message{
     }
 }
 @media only screen and (min-width: 2440px){
+    
+    #work #photo-feed{
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 4rem;
+    }
     #contact form label,
     #about p{
         font-size: 2rem;

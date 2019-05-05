@@ -16,13 +16,11 @@ let modalImg = document.getElementById("img01");
 const imageFeed = document.getElementById("photo-feed");
 const temp = imageFeed.querySelectorAll("img");
 const pictures = Array.prototype.slice.call(temp);
-console.log(pictures);
 function popUp(){
     modal.style.display = "block";
     modalImg.src = this.src;
     modalImg.dataset.reg = this.dataset.id;
     let id = this.dataset.id;
-    console.log(id);
     // Get the <span> element that closes the modal
     let span = document.getElementsByClassName("close")[0];
     // When the user clicks on <span> (x), close the modal
@@ -32,7 +30,7 @@ function popUp(){
 }
 pictures.forEach((pic)=>pic.addEventListener("click", popUp));
 
-
+/**Gallery implementation */
 let rightArrow = document.querySelector(".fa-arrow-right");
 let leftArrow = document.querySelector(".fa-arrow-left");
 
